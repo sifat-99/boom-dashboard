@@ -25,7 +25,15 @@ const Sidebar = () => {
             </div>
             <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
                 <div className="logo">
-                    <h2>Canine Karma</h2>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ fontSize: '40px' }}>
+                            🌎
+                        </div>
+                        <div>
+                            <h2>Canine Karma</h2>
+                            <p style={{ fontSize: '10px' }}>Dog Behavior Expert 🐕🐶</p>
+                        </div>
+                    </div>
                 </div>
                 <ul className="menu">
                     <li className="menu-item" style={{
