@@ -1,0 +1,130 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: calc(100vw - 260px);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.dog-image {
+    border-radius: 8px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.dog-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dog-breed {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.card-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.card-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.approve-btn {
+    background-color: green;
+    color: white;
+}
+
+.decline-btn {
+    background-color: red;
+    color: white;
+}
+
+.certificate-btn {
+    background-color: skyblue;
+    color: blue;
+    font-weight: bold;
+}
+
+@media(max-width: 1200px) {
+    .card-buttons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 970px) {
+    .dashboard-container {
+        width: calc(100vw - 80px);
+        margin-left: 40px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dog-image {
+        margin-bottom: 15px;
+    }
+
+    .card-info {
+        margin-left: 0;
+    }
+
+    .card-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .card-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    .dog-name {
+        font-size: 18px;
+    }
+
+    .card-buttons button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

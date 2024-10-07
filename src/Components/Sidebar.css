@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #0079b5;
+    color: white;
+    width: calc(100vw - 260px);
+    border-left: 2px solid #FFFFFF;
+}
+
+.search {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: skyblue;
+    color: black;
+    border: none;
+    padding: 5px;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+/* Sidebar base styles */
+.sidebar {
+    width: 260px;
+    background-color: #0079b5;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 15px 20px;
+    display: flex;
+    background-color: #4079b5;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.menu-item.active {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 48px;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+    color: Black;
+    z-index: 10;
+}
+
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+@media (max-width: 970px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 40px;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 5;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .navbar {
+        width: 100vw;
+        border: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 970px) {
+    .sidebar {
+        transform: none;
+        position: relative;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
